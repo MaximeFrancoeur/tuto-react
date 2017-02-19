@@ -12,8 +12,8 @@ La syntaxe " nomFonction = () => {} " nous permet de conserver le contexte `this
 
 
 ```javascript
-Cycle de vie d'un Component
-\__constructor()
+Cycle de vie d'un Component :
+|__constructor()
 |
 |__componentWillMount()
 |
@@ -57,7 +57,7 @@ Toutes ces fonctions ne sont pas appelées à l’initialisation du component.
 ## React-Redux
 
 
-
+![React-Redux Diagram](https://github.com/MaximeFrancoeur/tuto-react/blob/master/react-redux.png)
 
 
 Explication sur React plus bas dans cet article : https://anybox.fr/blog/appli-web-histoire-du-dom-react-redux
