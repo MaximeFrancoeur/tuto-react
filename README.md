@@ -1,5 +1,6 @@
 # Note sur React
 
+![Image of Yaktocat](https://github.com/MaximeFrancoeur/tuto-react/blob/master/react.svg=250x250)
 
 De quoi est composée une classe React ?
 * Le state est défini à l’initialisation de la classe par la méthode getInitialState() et l’on peut le mettre à jour par la méthode setState.
@@ -12,7 +13,7 @@ La syntaxe " nomFonction = () => {} " nous permet de conserver le contexte `this
 
 
 ```javascript
-Cycle de vie d'un Component :
+Cycle de vie dun Component :
 |__constructor()
 |
 |__componentWillMount()
