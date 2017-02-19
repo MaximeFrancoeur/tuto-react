@@ -1,15 +1,6 @@
 # Note sur React
 
 
-Source : 
-* https://gkueny.fr/react-lecon-1
-* https://gkueny.fr/react-lecon-2
-* https://gkueny.fr/react-lecon-3
-* https://gkueny.fr/react-lecon-4
-* https://gkueny.fr/react-lecon-5
-
-
-
 De quoi est composée une classe React ?
 * Le state est défini à l’initialisation de la classe par la méthode getInitialState() et l’on peut le mettre à jour par la méthode setState.
 * Les props sont passées à l’initialisation et sont définies en dehors de la classe.
@@ -20,7 +11,7 @@ De quoi est composée une classe React ?
 La syntaxe " nomFonction = () => {} " nous permet de conserver le contexte `this` du scope courant.
 
 
-
+```javascript
 Cycle de vie d'un Component
 \__constructor()
 |
@@ -31,13 +22,13 @@ Cycle de vie d'un Component
 |__componentDidMount()
 |
 |__componentWillUnmount()
-
+```
 
 * Avec componentWillMount, vous pourrez réaliser des opérations avant que votre component ne soit rendu. Vous pouvez par exemple initialiser le state (car toute modification du state dans cette fonction n’implique pas le rechargement du component). Cependant React conseille de réaliser cette opération dans le constructeur, comme nous l’avons fait depuis le début.
 * componentDidMount est quant à elle, appelée après le rendu du component. C’est ici que nous réaliserons les futurs appels API.
 * Et componentWillUnmount est appelée quand votre component est “démonté”.
 
-
+```javascript
 A chaque changement du State :
 |
 |__componentWillReceiveProps(nextProps)
@@ -49,21 +40,24 @@ A chaque changement du State :
 |__render
 |
 |__componentDidUpdate(prevProps, prevState)
-
+```
 
 * componentWillReceiveProps(nextProps) est appelée lorsqu’un component, qui est déjà initialisé, reçoit de nouvelles props. Dans cette fonction, on peut comparer les nouvelles props (ici contenues dans l’objet nextProps), avec les anciennes (this.props).
+
 * La fonction shouldComponentUpdate(nextProps, nextState) est appelée à chaque changement du state. On utilise cette fonction afin de faire savoir à React si, oui ou non, le component est affecté par le changement en retournant true ou false. Si l’on retourne false, les méthodes componentWillUpdate(), render(), et componentDidUpdate() ne seront pas appelées.
+
 * componentWillUpdate(nextProps, nextState) est appelée par React juste avant que les nouvelles props et le nouveau state ne soit rendues.
+
 * La fonction componentDidUpdate(prevProps, prevState) est, quant à elle, exécutée après le rendu du nouveau state / des nouvelles props. On utilisera cette fonction pour réaliser des actions sur le DOM ou des appelles d’ API.
 
 Toutes ces fonctions ne sont pas appelées à l’initialisation du component.
 
 
 
-React-Redux
+## React-Redux
 
 
-Lien pour modifier le diagram -> https://www.draw.io/#Lreact-redux
+
 
 
 Explication sur React plus bas dans cet article : https://anybox.fr/blog/appli-web-histoire-du-dom-react-redux
