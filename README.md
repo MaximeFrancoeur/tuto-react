@@ -1,7 +1,5 @@
 # Note sur React
 
-<img src="https://github.com/MaximeFrancoeur/tuto-react/blob/master/react.svg" width="50">
-
 De quoi est composée une classe React ?
 * Le state est défini à l’initialisation de la classe par la méthode getInitialState() et l’on peut le mettre à jour par la méthode setState.
 * Les props sont passées à l’initialisation et sont définies en dehors de la classe.
